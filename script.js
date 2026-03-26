@@ -258,6 +258,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   sections.forEach(s => navObserver.observe(s));
 
+  /* ─── SCROLL TO TOP BUTTON ─── */
+  const topBtn = document.getElementById('topBtn');
+  window.addEventListener('scroll', () => {
+    if (!topBtn) return;
+    if (window.scrollY > 520) {
+      topBtn.classList.add('visible');
+    } else {
+      topBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  if (topBtn) {
+    topBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
 
   /* ─── CARD TILT EFFECT (subtle 3D) ─── */
   document.querySelectorAll('.proj-card, .acard, .connect-card').forEach(card => {

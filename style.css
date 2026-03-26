@@ -774,3 +774,40 @@ footer {
   .face-2 { transform: rotateY(120deg) translateZ(180px); }
   .face-3 { transform: rotateY(240deg) translateZ(180px); }
 }
+
+/* ─────────── NEW STATS + TO TOP BUTTON ─────────── */
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, minmax(170px, 1fr)); gap: 18px;
+  margin-top: 34px;
+}
+.stat-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(0,0,0,0.06));
+  border: 1px solid rgba(255,255,255,0.09); border-radius: 16px;
+  padding: 24px; backdrop-filter: blur(10px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.25);
+  text-align: center;
+}
+.stat-value {
+  font-family: var(--font-head); font-size: 2.5rem; font-weight: 800;
+  color: var(--accent); margin-bottom: 8px;
+}
+.stat-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+.top-btn {
+  position: fixed; right: 24px; bottom: 24px;
+  width: 48px; height: 48px; border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.2); background: rgba(13,13,20,0.8);
+  color: #fff; z-index: 950; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0; pointer-events: none;
+  transition: opacity .3s ease, transform .2s ease;
+}
+.top-btn.visible { opacity: 1; pointer-events: auto; transform: translateY(-6px); }
+.top-btn:hover { transform: translateY(-3px); background: var(--accent); color: #000; }
+
+@media (max-width: 900px) {
+  .stats-grid { grid-template-columns: repeat(2, minmax(150px, 1fr)); }
+}
+@media (max-width: 600px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
+
