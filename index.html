@@ -23,21 +23,22 @@
   <div class="cursor-trail" id="cursorTrail"></div>
 
   <!-- ───── NAV ───── -->
-  <nav id="navbar">
-    <a href="#home" class="nav-brand">VM<span>.</span></a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Hire Me</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+  <div class="nav-wrapper">
+    <nav id="navbar">
+      <a href="#home" class="nav-brand">Vishal Mishra</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="https://drive.google.com/file/d/1AnOJzjdNMLEndadWVRsXdw6cOnHUMWCf/view?usp=drive_link" target="_blank"
+        class="nav-cta">My Resume &nearr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
 
   <!-- Mobile menu -->
   <div class="mobile-menu" id="mobileMenu">
@@ -61,21 +62,11 @@
 
     <div class="hero-inner">
       <div class="hero-text">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Open to Internships & Collabs
-        </div>
-        <h1 class="hero-title">
-          Hey, I'm <br />
-          <span class="gradient-text">Vishal Mishra</span>
+        <h1 class="hero-name">
+          <span class="first-name">Vishal</span>
+          <span class="last-name">Mishra</span>
         </h1>
-        <div class="hero-roles">
-          <span class="role-static">I build </span>
-          <div class="typewriter-wrap">
-            <span class="typewriter" id="typewriter"></span>
-            <span class="type-cursor">|</span>
-          </div>
-        </div>
+        <div class="hero-subtitle">FRONTEND DEVELOPER</div>
         <p class="hero-desc">
           CS student at LPU · Passionate about full-stack development.
         </p>
@@ -107,25 +98,145 @@
         </div>
       </div>
 
-      <div class="hero-avatar">
-        <div class="avatar-ring ring-1"></div>
-        <div class="avatar-ring ring-2"></div>
-        <div class="avatar-card">
-          <div class="avatar-initials">VM</div>
-          <div class="avatar-glow"></div>
+      <div class="hero-graphics">
+        <!-- Floating shapes -->
+        <div class="shape shape-polyhedron">
+          <svg viewBox="0 0 200 200" width="180" height="180">
+            <defs>
+              <linearGradient id="poly-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#ff758c" />
+                <stop offset="100%" stop-color="#ff7eb3" />
+              </linearGradient>
+              <linearGradient id="poly-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#764ba2" />
+                <stop offset="100%" stop-color="#667eea" />
+              </linearGradient>
+              <linearGradient id="poly-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4facfe" />
+                <stop offset="100%" stop-color="#00f2fe" />
+              </linearGradient>
+              <linearGradient id="poly-grad-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#43e97b" />
+                <stop offset="100%" stop-color="#38f9d7" />
+              </linearGradient>
+              <linearGradient id="poly-grad-5" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f6d365" />
+                <stop offset="100%" stop-color="#fda085" />
+              </linearGradient>
+              <linearGradient id="poly-grad-6" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f093fb" />
+                <stop offset="100%" stop-color="#f5576c" />
+              </linearGradient>
+            </defs>
+            <!-- 3D projection of an Icosahedron -->
+            <!-- Top middle to top right faces -->
+            <polygon points="100,20 165,65 100,85" fill="url(#poly-grad-1)" opacity="0.9" />
+            <polygon points="165,65 180,130 140,110" fill="url(#poly-grad-2)" opacity="0.95" />
+            <polygon points="100,85 165,65 140,110" fill="url(#poly-grad-3)" opacity="0.9" />
+
+            <!-- Bottom middle to bottom right faces -->
+            <polygon points="100,180 165,135 100,115" fill="url(#poly-grad-6)" opacity="0.9" />
+            <polygon points="165,135 140,110 100,115" fill="url(#poly-grad-2)" opacity="0.9" />
+            <polygon points="100,180 140,110 100,115" fill="url(#poly-grad-5)" opacity="0.95" />
+
+            <!-- Left side faces -->
+            <polygon points="100,20 35,65 100,85" fill="url(#poly-grad-5)" opacity="0.95" />
+            <polygon points="35,65 20,130 60,110" fill="url(#poly-grad-4)" opacity="0.9" />
+            <polygon points="100,85 35,65 60,110" fill="url(#poly-grad-6)" opacity="0.95" />
+
+            <!-- Bottom left faces -->
+            <polygon points="100,180 35,135 100,115" fill="url(#poly-grad-3)" opacity="0.95" />
+            <polygon points="35,135 60,110 100,115" fill="url(#poly-grad-1)" opacity="0.9" />
+            <polygon points="100,180 60,110 100,115" fill="url(#poly-grad-4)" opacity="0.9" />
+
+            <!-- Middle connecting faces -->
+            <polygon points="100,85 100,115 140,110" fill="url(#poly-grad-4)" opacity="0.95" />
+            <polygon points="100,85 100,115 60,110" fill="url(#poly-grad-3)" opacity="0.9" />
+          </svg>
         </div>
-        <!-- floating chips -->
-        <div class="float-chip chip-react">
-          <i class='bx bxl-react'></i> React
+
+        <div class="shape shape-torus">
+          <svg viewBox="0 0 140 140" width="120" height="120">
+            <defs>
+              <radialGradient id="torus-grad" cx="35%" cy="30%" r="60%">
+                <stop offset="0%" stop-color="#9decff" />
+                <stop offset="50%" stop-color="#00a8e8" />
+                <stop offset="100%" stop-color="#003060" />
+              </radialGradient>
+              <filter id="torus-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="2" dy="8" stdDeviation="6" flood-color="#001830" flood-opacity="0.5" />
+              </filter>
+            </defs>
+            <circle cx="70" cy="70" r="45" fill="none" stroke="url(#torus-grad)" stroke-width="24"
+              filter="url(#torus-shadow)" />
+          </svg>
         </div>
-        <div class="float-chip chip-java">
-          <i class='bx bxl-java'></i> Java
+
+        <div class="shape shape-dodecahedron">
+          <svg viewBox="0 0 120 120" width="100" height="100">
+            <defs>
+              <linearGradient id="dark-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2d2d38" />
+                <stop offset="100%" stop-color="#121218" />
+              </linearGradient>
+              <linearGradient id="dark-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#4a4a5c" />
+                <stop offset="100%" stop-color="#1c1c24" />
+              </linearGradient>
+              <linearGradient id="dark-grad-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1a1a24" />
+                <stop offset="100%" stop-color="#08080c" />
+              </linearGradient>
+            </defs>
+            <!-- A 3D-looking dark shaded dodecahedron (pentagonal faces) -->
+            <!-- Central Pentagram face -->
+            <polygon points="60,30 85,48 76,78 44,78 35,48" fill="url(#dark-grad-2)" stroke="#1a1a24"
+              stroke-width="1.5" />
+            <!-- Surrounding faces -->
+            <polygon points="60,30 85,48 95,20 60,5" fill="url(#dark-grad-1)" stroke="#1a1a24" stroke-width="1.5" />
+            <polygon points="85,48 76,78 105,78 112,48 95,20" fill="url(#dark-grad-3)" stroke="#1a1a24"
+              stroke-width="1.5" />
+            <polygon points="76,78 44,78 50,110 70,110 105,78" fill="url(#dark-grad-1)" stroke="#1a1a24"
+              stroke-width="1.5" />
+            <polygon points="44,78 35,48 8,20 15,48 50,110" fill="url(#dark-grad-3)" stroke="#1a1a24"
+              stroke-width="1.5" />
+            <polygon points="35,48 60,30 60,5 25,20 8,20" fill="url(#dark-grad-1)" stroke="#1a1a24"
+              stroke-width="1.5" />
+          </svg>
         </div>
-        <div class="float-chip chip-code">
-          <i class='bx bx-code-curly'></i> Open Source
+
+        <div class="shape shape-capsule">
+          <svg viewBox="0 0 80 150" width="70" height="130">
+            <defs>
+              <linearGradient id="pill-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#55ecd2" />
+                <stop offset="35%" stop-color="#38d9a9" />
+                <stop offset="70%" stop-color="#12b886" />
+                <stop offset="100%" stop-color="#0b7285" />
+              </linearGradient>
+              <filter id="capsule-shadow" x="-30%" y="-20%" width="160%" height="140%">
+                <feDropShadow dx="-2" dy="10" stdDeviation="6" flood-color="#083a2f" flood-opacity="0.4" />
+              </filter>
+            </defs>
+            <rect x="10" y="10" width="60" height="130" rx="30" ry="30" fill="url(#pill-grad)"
+              filter="url(#capsule-shadow)" />
+          </svg>
         </div>
-        <div class="float-chip chip-gpa">
-          <i class='bx bx-star'></i> 7.0 GPA
+
+        <!-- Central Circular Image Placeholder (Glassmorphic) -->
+        <!-- NOTE: To add your image, replace the placeholder-inner content below with: -->
+        <!-- <img src="profile.jpg" alt="Vishal Mishra" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; z-index: 12;" /> -->
+        <div class="profile-placeholder">
+          <div class="placeholder-border-glow"></div>
+          <div class="placeholder-inner">
+            <div class="placeholder-icon">
+              <i class='bx bx-image-add'></i>
+            </div>
+            <div class="placeholder-text">
+              <span>Insert Image</span>
+              <p>Upload your picture here</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -147,23 +258,28 @@
           <div class="section-eyebrow">Who Am I</div>
           <h2 class="section-title">Curious student.<br /><em>Ambitious builder.</em></h2>
           <p>
-I’m a passionate Frontend Developer currently learning and building modern, scalable web applications. I enjoy transforming ideas into real-world digital experiences. 
-My journey into web development started in my <strong>1st year</strong> of my Bachelor's at <strong>LPU</strong>, driven by curiosity and creativity.
-</p>
-<br>
-<p>
-Over time, I’ve worked on several projects that have strengthened my skills in building responsive interfaces, developing APIs,
- and creating complete end-to-end solutions.
-</p>
-<p>
-I’m also deeply interested in algorithms, system design, and crafting technology that enhances human experience.
-</p>
+            I’m a passionate Frontend Developer currently learning and building modern, scalable web applications. I
+            enjoy transforming ideas into real-world digital experiences.
+            My journey into web development started in my <strong>1st year</strong> of my Bachelor's at
+            <strong>LPU</strong>, driven by curiosity and creativity.
+          </p>
+          <br>
+          <p>
+            Over time, I’ve worked on several projects that have strengthened my skills in building responsive
+            interfaces, developing APIs,
+            and creating complete end-to-end solutions.
+          </p>
+          <p>
+            I’m also deeply interested in algorithms, system design, and crafting technology that enhances human
+            experience.
+          </p>
           <div class="about-tags">
             <span class="tag">🎓 LPU</span>
             <span class="tag">💻 Full-Stack Dev</span>
             <span class="tag">🌙 Night Coder</span>
-            </div>
-          <a href="https://drive.google.com/file/d/1AnOJzjdNMLEndadWVRsXdw6cOnHUMWCf/view?usp=drive_link" class="btn btn-primary btn-sm">
+          </div>
+          <a href="https://drive.google.com/file/d/1AnOJzjdNMLEndadWVRsXdw6cOnHUMWCf/view?usp=drive_link"
+            class="btn btn-primary btn-sm">
             <i class='bx bx-download'></i> Download CV
           </a>
         </div>
@@ -175,7 +291,7 @@ I’m also deeply interested in algorithms, system design, and crafting technolo
                 <img src="profile.jpg" alt="Vishal Mishra" class="profile-img" />
               </div>
             </div>
-<!-- 
+            <!-- 
             <div class="acard acard-2">
               <i class='bx bx-devices'></i>
               <h4>Web Development</h4>
@@ -307,7 +423,7 @@ I’m also deeply interested in algorithms, system design, and crafting technolo
               <img src="Music.png" alt="Project Image" class="proj-img-preview"
                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
               <div class="placeholder-content">
-                
+
               </div>
             </div>
             <div class="proj-links">
@@ -369,7 +485,7 @@ I’m also deeply interested in algorithms, system design, and crafting technolo
               <span class="chip"><i class='bx bxl-express'></i>Express</span>
               <span class="chip">FastAPI</span>
               <span class="chip">REST APIs</span>
-        
+
             </div>
           </div>
           <div class="skill-group">
@@ -435,7 +551,7 @@ I’m also deeply interested in algorithms, system design, and crafting technolo
               <h3>B.Tech Computer Science</h3>
               <h4>Lovely Professional University</h4>
               <p class="edu-date">2023 – 2027</p>
-              <p>CGPA: <strong>6.9 / 10</strong></p>
+              <p>CGPA: <strong>7.15 / 10</strong></p>
 
             </div>
           </div>
@@ -452,7 +568,7 @@ I’m also deeply interested in algorithms, system design, and crafting technolo
           </div>
         </div>
 
-        
+
       </div>
     </div>
   </section>

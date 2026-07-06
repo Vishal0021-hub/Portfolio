@@ -8,11 +8,20 @@ document.addEventListener('DOMContentLoaded', () => {
   let mouseX = 0, mouseY = 0;
   let trailX  = 0, trailY  = 0;
 
+  const heroGraphics = document.querySelector('.hero-graphics');
+
   document.addEventListener('mousemove', e => {
     mouseX = e.clientX;
     mouseY = e.clientY;
     cursor.style.left = mouseX + 'px';
     cursor.style.top  = mouseY + 'px';
+
+    if (heroGraphics) {
+      const x = (e.clientX - window.innerWidth / 2) / (window.innerWidth / 2);
+      const y = (e.clientY - window.innerHeight / 2) / (window.innerHeight / 2);
+      heroGraphics.style.setProperty('--mx', x.toFixed(3));
+      heroGraphics.style.setProperty('--my', y.toFixed(3));
+    }
   });
 
   function animTrail() {
@@ -79,38 +88,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  /* ─── TYPEWRITER EFFECT ─── */
-  const phrases = [
-    'Web Apps ⚡',
-    'Open Source 🌍',
-    'Cool Stuff 🚀',
-  ];
-  let phraseIdx = 0, charIdx = 0, deleting = false;
-  const typeEl = document.getElementById('typewriter');
-
-  function type() {
-    if (!typeEl) return;
-    const current = phrases[phraseIdx];
-
-    if (!deleting) {
-      typeEl.textContent = current.substring(0, charIdx + 1);
-      charIdx++;
-      if (charIdx === current.length) {
-        deleting = true;
-        setTimeout(type, 1800);
-        return;
-      }
-    } else {
-      typeEl.textContent = current.substring(0, charIdx - 1);
-      charIdx--;
-      if (charIdx === 0) {
-        deleting = false;
-        phraseIdx = (phraseIdx + 1) % phrases.length;
-      }
-    }
-    setTimeout(type, deleting ? 55 : 95);
+  /* ─── LETTER-BY-LETTER NAME ANIMATION ─── */
+  const firstNameEl = document.querySelector('.first-name');
+  const lastNameEl = document.querySelector('.last-name');
+  if (firstNameEl && lastNameEl) {
+    const splitText = (el, startDelay) => {
+      const text = el.textContent.trim();
+      el.textContent = '';
+      [...text].forEach((char, idx) => {
+        const span = document.createElement('span');
+        span.textContent = char === ' ' ? '\u00A0' : char;
+        span.className = 'letter';
+        span.style.animationDelay = `${startDelay + idx * 0.06}s`;
+        el.appendChild(span);
+      });
+    };
+    splitText(firstNameEl, 0.2);
+    splitText(lastNameEl, 0.6);
   }
-  setTimeout(type, 800);
 
 
   /* ─── INTERSECTION OBSERVER (reveal + bars) ─── */
