@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishal Mishra — Student Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=1.3" />
   <link
     href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&display=swap"
     rel="stylesheet" />
@@ -32,8 +32,13 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="https://drive.google.com/file/d/1AnOJzjdNMLEndadWVRsXdw6cOnHUMWCf/view?usp=drive_link" target="_blank"
-        class="nav-cta">My Resume &nearr;</a>
+      <div class="nav-actions">
+        <a href="https://drive.google.com/file/d/1eL6NKhFrjH98PkeYbt4YxQSHt2dwSpTX/view?usp=drive_link" target="_blank"
+          class="nav-cta">My Resume &nearr;</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Theme">
+          <i class='bx bx-moon'></i>
+        </button>
+      </div>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -66,7 +71,7 @@
           <span class="first-name">Vishal</span>
           <span class="last-name">Mishra</span>
         </h1>
-        <div class="hero-subtitle">FRONTEND DEVELOPER</div>
+        <div class="hero-subtitle">FULL-STACK DEVELOPER</div>
         <p class="hero-desc">
           CS student at LPU · Passionate about full-stack development.
         </p>
@@ -278,7 +283,7 @@
             <span class="tag">💻 Full-Stack Dev</span>
             <span class="tag">🌙 Night Coder</span>
           </div>
-          <a href="https://drive.google.com/file/d/1AnOJzjdNMLEndadWVRsXdw6cOnHUMWCf/view?usp=drive_link"
+          <a href="https://drive.google.com/file/d/1eL6NKhFrjH98PkeYbt4YxQSHt2dwSpTX/view?usp=drive_link"
             class="btn btn-primary btn-sm">
             <i class='bx bx-download'></i> Download CV
           </a>
@@ -354,7 +359,7 @@
 
       <div class="projects-grid">
 
-        <div class="proj-card featured" data-cat="web">
+        <div class="proj-card" data-cat="web">
           <div class="proj-thumb thumb-1">
             <div class="proj-logo-placeholder">
               <!-- Using Local Image: Arthavision.png -->
@@ -386,8 +391,8 @@
           </div>
         </div>
 
-        <div class="proj-card" data-cat="ml">
-          <div class="proj-thumb thumb-2">
+        <div class="proj-card featured" data-cat="web">
+          <div class="proj-thumb thumb-1">
             <div class="proj-logo-placeholder">
               <!-- DIRECT EMBED LINK (Required for images) -->
               <img src="Devcollab.png" alt="Project Image" class="proj-img-preview"
@@ -399,7 +404,7 @@
             </div>
             <div class="proj-links">
               <a href="https://github.com/Vishal0021-hub/Dev_collab" class="proj-link"><i class='bx bxl-github'></i></a>
-              <a href="#" class="proj-link"><i class='bx bx-link-external'></i></a>
+              <a href="https://devspace-frontend-tx54.onrender.com/" class="proj-link"><i class='bx bx-link-external'></i></a>
             </div>
           </div>
           <div class="proj-body">
@@ -416,8 +421,8 @@
           </div>
         </div>
 
-        <div class="proj-card" data-cat="mobile">
-          <div class="proj-thumb thumb-3">
+        <div class="proj-card" data-cat="web">
+          <div class="proj-thumb thumb-1">
             <div class="proj-logo-placeholder">
               <!-- DIRECT EMBED LINK (Required for images) -->
               <img src="Music.png" alt="Project Image" class="proj-img-preview"
@@ -446,6 +451,38 @@
           </div>
         </div>
 
+        <!-- BAnking System  -->
+         <!-- <div class="proj-card featured" data-cat="web">
+          <div class="proj-thumb thumb-1">
+            <div class="proj-logo-placeholder">
+              <!-- Using Local Image: Arthavision.png 
+              <img src="Arthavision.png" alt="Project Image" class="proj-img-preview"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="placeholder-content">
+
+              </div>
+            </div>
+            <div class="proj-links">
+              <a href="https://github.com/Vishal0021-hub/National-Accounts-dashboard" class="proj-link"><i
+                  class='bx bxl-github'></i></a>
+              <a href="https://national-accounts-dashboard.vercel.app/" class="proj-link"><i
+                  class='bx bx-link-external'></i></a>
+            </div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-cat web">National Dashboard Accounts</span>
+              <span class="proj-year">2025</span>
+            </div>
+            <h3>ArthaVision</h3>
+            <p>Full-stack platform that centralizes India’s key economic indicators such as GDP, Inflation, Fiscal
+              Deficit, Trade Statistics, Employment Data, and State-wise GDP, and presents them through a modern
+              interactive dashboard with powerful visualization and features..</p>
+            <div class="proj-stack">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+          </div>
+        </div> -->
 
 
 
@@ -497,6 +534,7 @@
               <span class="chip"><i class='bx bxl-firebase'></i> Firebase</span>
               <span class="chip">AWS S3</span>
               <span class="chip">Docker</span>
+              <span class="chip">Jenkins</span>
             </div>
           </div>
 
@@ -654,36 +692,6 @@
 
       </div>
 
-      <!-- Contact Form -->
-      <div class="contact-form-wrap reveal">
-        <div class="form-header">
-          <h3>Or send a message directly</h3>
-          <p>I usually respond within 24 hours ⚡</p>
-        </div>
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <div class="form-field">
-              <label>Your Name</label>
-              <input type="text" name="name" placeholder="Jane Doe" required />
-            </div>
-            <div class="form-field">
-              <label>Email Address</label>
-              <input type="email" name="email" placeholder="jane@example.com" required />
-            </div>
-          </div>
-          <div class="form-field">
-            <label>Subject</label>
-            <input type="text" name="subject" placeholder="Internship Opportunity / Collab Idea..." required />
-          </div>
-          <div class="form-field">
-            <label>Message</label>
-            <textarea name="message" placeholder="Hey Vishal! I'd love to..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-send" id="sendBtn">
-            <i class='bx bx-send'></i> Send Message
-          </button>
-        </form>
-      </div>
 
     </div>
   </section>

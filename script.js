@@ -296,4 +296,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 400);
   }
 
+  /* ─── DARK / LIGHT THEME TOGGLE ─── */
+  const themeToggleBtn = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Check stored theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+    if (themeToggleBtn) {
+      themeToggleBtn.innerHTML = "<i class='bx bx-sun'></i>";
+    }
+  }
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+      const isLight = body.classList.contains('light-mode');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      themeToggleBtn.innerHTML = isLight ? "<i class='bx bx-sun'></i>" : "<i class='bx bx-moon'></i>";
+    });
+  }
+
 });
